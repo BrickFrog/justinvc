@@ -1,0 +1,57 @@
+created: 20200727025356090
+modified: 20200727032555353
+tags: Concepts [[Book Chapter]] [[Data Science]] [[Machine Learning]]
+title: Data Representation Design Patterns
+tmap.id: 493aa5b4-945e-4950-8c5b-17c335d0a6e8
+type: text/vnd.tiddlywiki
+
+''Hashed Features''
+
+Essentially, this involves hashing (fingerprint, specifically) via a deterministic mechanism to bucket categories that may have unknown features in the future not represented by the training set.
+
+In the book, it essentially involves the absolute value of the modulo of the farm fingerprint, with a number of buckets. A good rule of thumb is to aim for ~5ish values per bucket. This is naturally lossy, so if the categorical values are known this obviously won't be useful.
+
+Aggregate features can offset skew in this, for example, in airport listings, Chicago would skew many small county based airports. 
+
+There's the possibility of empty buckets, but L2 reg can solve this.
+
+''Reframing''
+
+The embedding design pattern addresses high-cardinality data by passing through an embedding layer with trainable weights, thus mapping to low dimensional space.  
+
+This can be done with tensorflow.
+
+```python
+plurality = tf.feature_column.categorical_column_with_vocabulary_list(
+            'plurality', ['Single(1)', 'Multiple(2+)', 'Twins(2)',
+'Triplets(3)', 'Quadruplets(4)', 'Quintuplets(5)'])
+
+plurality_embed = tf.feature_column.embedding_column(plurality, dimension=2)
+
+```
+
+There's also discussion on using pre-trained embeddings for NLP suchs as Word2Vec or BERT.
+
+''Feature Cross''
+
+This is a standard discussion on using crosses of features to capture non-linearity. Covered by most books, it does discuss that there's an option in tensorflow for this with tf.feature_column.crossed_column. They train much faster than say, a DNN, so this could be useful for things that require constant retraining(?).
+
+You can apply it to numerical data by bucketing. This can lead to spareness, so you could pass it through an embedding layer.
+
+''Multimodel Input Representations''
+
+This essentially involves encoding data in multiple ways, and the ability to combine things into a single feature, usually via an array.
+
+```python
+rating_data = [2, 3, 5]
+def good_or_bad(rating):
+  if rating > 3:
+    return 1
+  else:
+    return 0
+rating_processed = []
+for i in rating_data:
+  rating_processed.append([i, good_or_bad(i)])
+```
+
+This would result in arrays such as: [`[3,0],[4,1],[5,1],[1,0]`]

@@ -1,0 +1,6 @@
+created: 20201022055607448
+modified: 20201022055607457
+title: $:/config/EmptyStoryMessage
+type: text/vnd.tiddlywiki
+
+{{$:/themes/jd/Mono/EmptyStoryMessage}}

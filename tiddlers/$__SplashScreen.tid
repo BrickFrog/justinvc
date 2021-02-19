@@ -1,0 +1,103 @@
+created: 20201022055605958
+modified: 20201022055605968
+tags: $:/tags/RawMarkupWikified/TopBody
+title: $:/SplashScreen
+type: text/vnd.tiddlywiki
+
+\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+\rules only filteredtranscludeinline transcludeinline macrocallinline
+<div class="tc-remove-when-wiki-loaded">
+<style scoped>
+
+.tc-splash-text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+	margin: 20px auto 0;
+	width: 200px;
+	text-align: center;
+	color: <<colour foreground>>;
+	fill: <<colour foreground>>;
+}
+
+html body.tc-body {
+  background: <<colour page-background>>;
+}
+.line-wrapper {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.line {
+  width: 50px;
+  height: 1px;
+  background: <<colour muted-foreground>>;
+  -webkit-animation: line 2s infinite; 
+  -moz-animation: line 2s infinite; 
+  -o-animation: line 2s infinite; 
+  animation: line 2s infinite; 
+}
+@-webkit-keyframes line {
+  0%   { width: 10px; }
+  50% { width: 200px; }
+  100% { width: 10px; }
+}
+@keyframes line {
+  0%   { width: 10px; }
+  50% { width: 200px; }
+  100% { width: 10px; }
+}
+.linetwo {
+  width: 50px;
+  height: 1px;
+  background: <<colour muted-foreground>>;
+  -webkit-animation: linetwo 2s infinite; 
+  -moz-animation: linetwo 2s infinite; 
+  -o-animation: linetwo 2s infinite; 
+  animation: linetwo 2s infinite; 
+  margin: 5px 0;
+}
+@-webkit-keyframes linetwo {
+  0%   { width: 5px; }
+  70% { width: 180px; }
+  100% { width: 5px; }
+}
+@keyframes linetwo {
+  0%   { width: 5px; }
+  70% { width: 180px; }
+  100% { width: 5px; }
+}
+.linethree {
+  width: 50px;
+  height: 1px;
+  background: <<colour muted-foreground>>;
+  -webkit-animation: linethree 2s infinite; 
+  -moz-animation: linethree 2s infinite; 
+  -o-animation: linethree 2s infinite; 
+  animation: linethree 2s infinite; 
+  margin: linethree 0;
+}
+@-webkit-keyframes linethree {
+  0%   { width: 0; }
+ 80% { width: 160px; }
+  100% { width: 0; }
+}
+@keyframes linethree {
+  0%   { width: 0; }
+  80% { width: 160px; }
+  100% { width: 0; }
+}
+</style>
+
+<div class="line-wrapper">
+<div class="tc-splash-text">{{$:/SiteTitle}}</div>
+<div class="line"></div>
+<div class="linetwo"></div>
+<div class="linethree"></div>
+</div>
+
+</div>

@@ -1,0 +1,14 @@
+created: 20200727025153210
+modified: 20200727025411078
+tags: Books Programming [[Machine Learning]] [[Data Science]] Reading Python Tensorflow
+title: Machine Learning Design Patterns
+tmap.id: f6deaf19-e83b-4842-8324-bb81f7131037
+
+https://learning.oreilly.com/library/view/machine-learning-design/9781098115777/
+
+Early Access book written by Google engineers. Pret////ty interesting.
+
+# [[Data Representation Design Patterns]]
+# [[Problem Representation Design Patterns]]
+# [[Patterns That Modify Model Training]]
+# [[Design Patterns for Resilient Serving]]
