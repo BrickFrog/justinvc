@@ -1,8 +1,0 @@
-created: 20190202114537700
-creator: jd
-list: $:/core/ui/TopBar/menu $:/core/ui/Buttons/home $:/core/ui/Buttons/new-tiddler $:/core/ui/Buttons/control-panel $:/themes/jd/Mono/Buttons/searchbar $:/themes/jd/Mono/Buttons/switch-palette
-modified: 20210107041508414
-modifier: jd
-tags: 
-title: $:/themes/jd/Mono/Database
-type: application/json
