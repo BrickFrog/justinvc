@@ -2,5 +2,7 @@ tiddlers
 external
 Vault
 tbuild.bat
-parse.py
 .vscode
+.ipynb*
+brain2tiddly
+*.py

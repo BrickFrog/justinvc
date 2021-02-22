@@ -1,8 +1,11 @@
-created: 20200629025632849
-modified: 20200705230932395
-tags: Root
+created: 20201021022819000
+modified: 20201021022941000
+tags: Core
 title: Media
-tmap.edges: {"07ddd65d-efae-488d-b0cf-17f9c6b8e63c":{"to":"ba8c982a-dc62-4cc7-ab92-153df80ed02e","type":"includes"}}
-tmap.id: d545cce3-09c2-4ee9-9fcc-4cc0b3032da5
 
-[[Books]]
+*[[Books]]
+*[[Movies]]
+*[[Television]]
+*[[Video Games]]
+*[[Podcasts]]
+*[[Music]]

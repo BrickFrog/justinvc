@@ -6,5 +6,5 @@ title: $:/jt/Locator
 type: text/vnd.tiddlywiki
 
 <$reveal type="match" default="" text={{{ [prefix[$:/state/popup/search-dropdown]] }}}>
-  <<locator-view baseTitle:"Root">>
+  <<locator-view baseTitle:"∿">>
 </$reveal>

@@ -2,6 +2,7 @@ created: 20150319034848355
 modified: 20151026094051616
 tags: $:/tags/Macro
 title: Table Macros
+tmap.id: 48572449-bd19-4149-983c-9d38df324700
 
 \define TableWizardDisplayTableDummyMacro()
   <<DisplayTable """$(ConfigTiddler)$""">>
