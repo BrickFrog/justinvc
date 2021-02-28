@@ -7,3 +7,4 @@ tbuild.bat
 .ipynb*
 brain2tiddly
 *.py
+.bat
